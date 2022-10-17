@@ -296,6 +296,12 @@ hr {
     padding: 2em 3em;
 }
 
+.portfolio-main-section {
+    width: 95vw;
+}
+
+
+
 .main-section-block {
     display: flex;
     flex-direction: row;
