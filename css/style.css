@@ -1,8 +1,3 @@
-/* color:#f3c6c6; */
-/* background-color: #facdcd; */
-/* color:#30415a; */
-
-
 
 /*-------------------*\
   #GLOBAL SETTINGS
@@ -101,7 +96,7 @@ hr {
     background: #ffe46b;
 }
 
-.about-navbar-menu, .navbar-menu{
+.navbar-menu, .about-navbar-menu{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -132,6 +127,7 @@ hr {
     /* margin: 0.5em; */
 }
 
+/* hover and active effects on links in menu */
 .menu__link:hover{ 
     box-shadow: 0px 0px 3px 3px #44474a; 
 }
@@ -140,6 +136,16 @@ hr {
     color: #f32525;
 }
 
+/* disabling these hover and active effects on link serving as the current page title */
+.menu__link_current:hover{ 
+    box-shadow:none 
+}
+
+.menu__link_current:active{ 
+    color:currentColor;
+}
+
+/* styling the link serving as the current page title */
 .menu__link_current {
     text-decoration: underline;
     text-decoration-style: wavy;
@@ -431,7 +437,7 @@ justify-content: center;
             background-color: #0000;
         }
 
-        .navbar .navbar-menu__button:checked + ul {
+        .navbar .navbar-menu__button:checked + menu {
             display: flex;
           }
 
