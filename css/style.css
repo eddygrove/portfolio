@@ -34,7 +34,6 @@ h6 {
 hr {
   border: 0;
   border-bottom: 1px dashed #2a3542;
-  background: #d2bc58;
 }
 
 /*-------------------*\
@@ -96,7 +95,7 @@ hr {
   padding: 1.4em 0 0 25px;
   display: flex;
   justify-content: flex-end;
-  background: #ffe46b;
+  background-color: #ffe46b;
 }
 
 .navbar-menu,
@@ -309,6 +308,7 @@ hr {
   display: flex;
   flex-direction: row;
   align-content: space-between;
+  background-color: aliceblue;
 }
 
 .project-list {
@@ -401,34 +401,46 @@ hr {
   .smallmedia-headline {
     margin: 0 auto;
     display: block;
+    height: 2em;
+    background: ##ffe46b;
+  }
+
+  .navbar-foldout-container {
+    border-radius: 10px;
+    background-color: rgb(240, 255, 255, 0.8);
+  }
+
+  .navbar-foldout-container:has(input:not(:checked)) {
+    background-color: #0000;
+  }
+
+  .navbar-menu__button {
+    margin-left: auto;
   }
 
   .navbar-menu {
     display: none;
-    position: sticky;
-    /* background: inherit; */
-    flex-direction: column;
-    /* inset: 0 0 0; */
-    padding: 40px;
-    margin: 0;
-    /* align-items: center;
-            justify-content: center; */
-    gap: 20px;
-    border-radius: 10px;
-    background-color: rgb(240, 255, 255, 0.6);
   }
 
+  /* ::::::: THE BELOW TRANSPARENCY NOT HONOURED? :::::::: */
   .navbar .navbar-menu__button {
     display: grid;
     /* z-index: 3; */
     background-color: #0000;
   }
 
-  .navbar .navbar-menu__button:checked + menu {
+  .navbar-menu__button:checked + menu {
     display: flex;
+    position: sticky;
+    flex-direction: column;
+    padding: 40px;
+    margin: 0;
+    gap: 20px;
   }
 
   .menu__link {
+    display: flex;
+    flex-direction: column;
     padding: 0.08em 0.5em;
     /* margin: 0.1em 0.2em; */
     line-height: 2;
@@ -439,6 +451,14 @@ hr {
 
   .menu__link:hover {
     box-shadow: 0px 0px 3px 3px;
+  }
+
+  .menu__link_current:hover {
+    box-shadow: none;
+  }
+
+  .menu__link_current:active {
+    color: currentColor;
   }
 
   .menu__link_current {
